@@ -1,0 +1,109 @@
+// VARIABLES
+$primary: #b59571;
+$dim: #333333;
+$black: #000000;
+$white: #ffffff;
+$grey: #5b5b5b;
+
+//FONT-SIZE
+$fnBig: clamp(16px, 2vw, 48px);
+$fnMed: clamp(12px, 1.5vw, 24px);
+$fnOpt: clamp(10px, 1.2vw, 20px);
+$fnLit: clamp(8px, 1vw, 12px);
+$fnBut: clamp(16px, 1.5vw, 24px);
+$fnDash: clamp(20px, 2vw, 32px);
+
+// FONTS
+@font-face {
+  font-family: "Circe";
+  src: url("./assets/font/Circe-Regular.ttf");
+}
+@font-face {
+  font-family: "CirceBold";
+  src: url("./assets/font/Circe-Bold.ttf");
+}
+
+// PREF
+* {
+  margin: 0;
+  padding: 0;
+  font-family: "Circe";
+}
+a {
+  text-decoration: none;
+  color: $white;
+}
+body {
+  background-color: $dim;
+}
+main {
+  font-size: $fnMed;
+}
+
+// MIXINS
+@mixin center {
+  display: flex;
+  justify-content: center;
+  align-items: center;
+}
+
+@mixin start {
+  display: flex;
+  justify-content: flex-start;
+  align-items: center;
+}
+@mixin end {
+  display: flex;
+  justify-content: flex-end;
+  align-items: center;
+}
+
+@mixin around {
+  display: flex;
+  justify-content: space-around;
+  align-items: center;
+}
+
+@mixin between {
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+}
+
+@mixin column {
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+  align-items: center;
+}
+@mixin columnBetween {
+  display: flex;
+  flex-direction: column;
+  justify-content: space-between;
+  align-items: center;
+}
+@mixin columnAround {
+  display: flex;
+  flex-direction: column;
+  justify-content: space-around;
+  align-items: center;
+}
+@mixin full {
+  width: 100%;
+  height: 100%;
+}
+@mixin section {
+  width: 100vw;
+  height: 100vh;
+}
+
+@mixin cent {
+  display: flex;
+  justify-content: center;
+}
+@mixin imgback($backimg) {
+  background-size: 100%;
+  background-repeat: no-repeat;
+  background-position: center;
+  background-image: url($backimg);
+}

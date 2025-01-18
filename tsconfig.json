@@ -1,6 +1,31 @@
 {
 	"extends": "./.svelte-kit/tsconfig.json",
-	"compilerOptions": {
+  "files": [],
+  "references": [
+    { "path": "./tsconfig.app.json" },
+    { "path": "./tsconfig.node.json" }
+  ],
+  "compillerOptions": {
+    "baseUrl": "./src",
+    "paths": {
+      "@/*": ["*"],
+      "views/*": ["./src/views/*"],
+      "routes/*": ["./src/routes/*"],
+      "types/*": ["./src/types/*"],
+      "ui/*": ["./src/ui/*"],
+      "sections/*": ["./src/ui/sections/*"],
+      "modals/*": ["./src/ui/popup/*"],
+      "blocks/*": ["./src/ui/blocks/*"],
+      "elements/*": ["./src/ui/elements/*"],
+      "inputs/*": ["./src/ui/elements/inputs/*"],
+      "buttons/*": ["./src/ui/elements/buttons/*"],
+      "img/*": ["./src/assets/img/*"],
+      "font/*": ["./src/assets/font/*"],
+      "css/*": ["./src/assets/style/*"]
+    },
+    "exclude": ["./@types", "node_modules"],
+    "include": ["./src/**/*"],
+    "TypeRoots": [ "node_modules/@types", "types" ],
 		"allowJs": true,
 		"checkJs": true,
 		"esModuleInterop": true,

@@ -1,18 +1,19 @@
 # sv
 
-Everything you need to build a Svelte project, powered by [`sv`](https://github.com/sveltejs/cli).
-
 ## Creating a project
 
-If you're seeing this, you've probably already done this step. Congrats!
+Clone this repo
 
 ```bash
 # create a new project in the current directory
-npx sv create
-
-# create a new project in my-app
-npx sv create my-app
+git clone git@github:Teishotoku/sveltePattern.git
 ```
+
+## Rules
+
+sections make with other style file
+blocks elements make style into svelte files
+interface & types named pascalCase
 
 ## Developing
 
