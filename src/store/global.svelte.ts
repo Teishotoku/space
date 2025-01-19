@@ -1,1 +1,1 @@
-export let store = $state(5);
+export let store = $state<object>({ value: 'hello from store' });

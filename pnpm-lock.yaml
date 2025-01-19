@@ -7,10 +7,6 @@ settings:
 importers:
 
   .:
-    dependencies:
-      sass:
-        specifier: ^1.83.4
-        version: 1.83.4
     devDependencies:
       '@eslint/compat':
         specifier: ^1.2.5
@@ -45,6 +41,9 @@ importers:
       prettier-plugin-svelte:
         specifier: ^3.3.3
         version: 3.3.3(prettier@3.4.2)(svelte@5.17.5)
+      sass:
+        specifier: ^1.83.4
+        version: 1.83.4
       svelte:
         specifier: ^5.0.0
         version: 5.17.5

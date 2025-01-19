@@ -1,17 +1,23 @@
 <script lang="ts">
 	import 'css/index.scss';
+	import { store } from '../store/global.svelte';
 </script>
 
 <main>
-	<h1>Welcome to SvelteKit</h1>
-	<p>
-		Visit <a href="https://svelte.dev/docs/kit">svelte.dev/docs/kit</a> to read the documentation
-	</p>
+	<h1>Welcome to SveltePattern</h1>
+	<h2>{store.value}</h2>
 	<a href="/about">about</a>
-	<div>
-		<h1>hello from home</h1>
-	</div>
 </main>
 
-<style>
+<style lang="scss">
+	@use 'css' as *;
+	main {
+		width: 100vw;
+		height: 100vh;
+		background-color: $prim;
+		@include column;
+	}
+	h1 {
+		color: $black;
+	}
 </style>

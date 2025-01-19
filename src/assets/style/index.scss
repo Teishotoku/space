@@ -1,9 +1,19 @@
 // VARIABLES
-$primary: #b59571;
-$dim: #333333;
-$black: #000000;
-$white: #ffffff;
-$grey: #5b5b5b;
+$black: #181926;
+$blackLight: #1e2030;
+$dim: #2e2e2e;
+$greyDark: #424242;
+$greyLight: #bbb6b6;
+$white: #cad3f5;
+$red: #ed8796;
+$orange: #f5a97f;
+$yellow: #eed49f;
+$green: #a6da95;
+$cyan: #7dc4e4;
+$blue: #8aadf4;
+$purple: #c6a0f6;
+$pink: #f5bde6;
+$prim: #f5a97f;
 
 //FONT-SIZE
 $fnBig: clamp(16px, 2vw, 48px);
@@ -15,95 +25,110 @@ $fnDash: clamp(20px, 2vw, 32px);
 
 // FONTS
 @font-face {
-  font-family: "Circe";
-  src: url("./assets/font/Circe-Regular.ttf");
+	font-family: 'regular';
+	src: url('../font/JetBrainsMono-Regular.woff2');
 }
 @font-face {
-  font-family: "CirceBold";
-  src: url("./assets/font/Circe-Bold.ttf");
+	font-family: 'bold';
+	src: url('../font/JetBrainsMono-Bold.woff2');
+}
+@font-face {
+	font-family: 'extraBold';
+	src: url('../font/JetBrainsMono-ExtraBold.woff2');
 }
 
 // PREF
 * {
-  margin: 0;
-  padding: 0;
-  font-family: "Circe";
+	margin: 0;
+	padding: 0;
+	font-family: 'regular';
+}
+h1 {
+	font-family: 'extraBold';
+	font-size: $fnBig;
+}
+h2 {
+	font-family: 'bold';
+	font-size: $fnMed;
+}
+p {
+	font-size: $fnLit;
 }
 a {
-  text-decoration: none;
-  color: $white;
+	text-decoration: none;
+	color: $blue;
 }
 body {
-  background-color: $dim;
+	background-color: $dim;
 }
 main {
-  font-size: $fnMed;
+	font-size: $fnMed;
 }
 
 // MIXINS
 @mixin center {
-  display: flex;
-  justify-content: center;
-  align-items: center;
+	display: flex;
+	justify-content: center;
+	align-items: center;
 }
 
 @mixin start {
-  display: flex;
-  justify-content: flex-start;
-  align-items: center;
+	display: flex;
+	justify-content: flex-start;
+	align-items: center;
 }
 @mixin end {
-  display: flex;
-  justify-content: flex-end;
-  align-items: center;
+	display: flex;
+	justify-content: flex-end;
+	align-items: center;
 }
 
 @mixin around {
-  display: flex;
-  justify-content: space-around;
-  align-items: center;
+	display: flex;
+	justify-content: space-around;
+	align-items: center;
 }
 
 @mixin between {
-  display: flex;
-  justify-content: space-between;
-  align-items: center;
+	display: flex;
+	justify-content: space-between;
+	align-items: center;
 }
 
 @mixin column {
-  display: flex;
-  flex-direction: column;
-  justify-content: center;
-  align-items: center;
+	display: flex;
+	flex-direction: column;
+	justify-content: center;
+	align-items: center;
 }
 @mixin columnBetween {
-  display: flex;
-  flex-direction: column;
-  justify-content: space-between;
-  align-items: center;
+	display: flex;
+	flex-direction: column;
+	justify-content: space-between;
+	align-items: center;
 }
 @mixin columnAround {
-  display: flex;
-  flex-direction: column;
-  justify-content: space-around;
-  align-items: center;
+	display: flex;
+	flex-direction: column;
+	justify-content: space-around;
+	align-items: center;
 }
 @mixin full {
-  width: 100%;
-  height: 100%;
+	width: 100%;
+	height: 100%;
 }
 @mixin section {
-  width: 100vw;
-  height: 100vh;
+	width: 100vw;
+	height: 100vh;
 }
 
 @mixin cent {
-  display: flex;
-  justify-content: center;
+	display: flex;
+	justify-content: center;
 }
 @mixin imgback($backimg) {
-  background-size: 100%;
-  background-repeat: no-repeat;
-  background-position: center;
-  background-image: url($backimg);
+	background-size: 100%;
+	background-repeat: no-repeat;
+	background-position: center;
+	background-image: url($backimg);
 }
