@@ -1,23 +1,17 @@
 <script lang="ts">
-	import 'css/index.scss';
-	import { store } from '../store/global.svelte';
+	import SectionMain from 'sections/sectionMain.svelte';
 </script>
 
 <main>
-	<h1>Welcome to SveltePattern</h1>
-	<h2>{store.value}</h2>
-	<a href="/about">about</a>
+	<SectionMain />
 </main>
 
 <style lang="scss">
-	@use 'css' as *;
+	@use 'scss' as *;
 	main {
 		width: 100vw;
 		height: 100vh;
 		background-color: $prim;
-		@include column;
-	}
-	h1 {
-		color: $black;
+		@include columnAround;
 	}
 </style>

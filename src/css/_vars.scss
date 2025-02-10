@@ -1,0 +1,27 @@
+// VARIABLES
+$black: #181926;
+$blackLight: #1e2030;
+$dim: #2e2e2e;
+$greyDark: #424242;
+$greyLight: #bbb6b6;
+$white: #cad3f5;
+$red: #ed8796;
+$orange: #f5a97f;
+$yellow: #eed49f;
+$green: #a6da95;
+$cyan: #7dc4e4;
+$blue: #8aadf4;
+$purple: #c6a0f6;
+$pink: #f5bde6;
+$prim: #f5a97f;
+
+//FONT-SIZE
+$fnBig: clamp(16px, 2vw, 48px);
+$fnMed: clamp(12px, 1.5vw, 24px);
+$fnOpt: clamp(10px, 1.2vw, 20px);
+$fnLit: clamp(8px, 1vw, 12px);
+$fnBut: clamp(16px, 1.5vw, 24px);
+$fnDash: clamp(20px, 2vw, 32px);
+
+//RADIUS
+$rdMed: 16px;

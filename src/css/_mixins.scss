@@ -1,77 +1,10 @@
-// VARIABLES
-$black: #181926;
-$blackLight: #1e2030;
-$dim: #2e2e2e;
-$greyDark: #424242;
-$greyLight: #bbb6b6;
-$white: #cad3f5;
-$red: #ed8796;
-$orange: #f5a97f;
-$yellow: #eed49f;
-$green: #a6da95;
-$cyan: #7dc4e4;
-$blue: #8aadf4;
-$purple: #c6a0f6;
-$pink: #f5bde6;
-$prim: #f5a97f;
-
-//FONT-SIZE
-$fnBig: clamp(16px, 2vw, 48px);
-$fnMed: clamp(12px, 1.5vw, 24px);
-$fnOpt: clamp(10px, 1.2vw, 20px);
-$fnLit: clamp(8px, 1vw, 12px);
-$fnBut: clamp(16px, 1.5vw, 24px);
-$fnDash: clamp(20px, 2vw, 32px);
-
-// FONTS
-@font-face {
-	font-family: 'regular';
-	src: url('../font/JetBrainsMono-Regular.woff2');
-}
-@font-face {
-	font-family: 'bold';
-	src: url('../font/JetBrainsMono-Bold.woff2');
-}
-@font-face {
-	font-family: 'extraBold';
-	src: url('../font/JetBrainsMono-ExtraBold.woff2');
-}
-
-// PREF
-* {
-	margin: 0;
-	padding: 0;
-	font-family: 'regular';
-}
-h1 {
-	font-family: 'extraBold';
-	font-size: $fnBig;
-}
-h2 {
-	font-family: 'bold';
-	font-size: $fnMed;
-}
-p {
-	font-size: $fnLit;
-}
-a {
-	text-decoration: none;
-	color: $blue;
-}
-body {
-	background-color: $dim;
-}
-main {
-	font-size: $fnMed;
-}
-
+@use 'vars' as *;
 // MIXINS
 @mixin center {
 	display: flex;
 	justify-content: center;
 	align-items: center;
 }
-
 @mixin start {
 	display: flex;
 	justify-content: flex-start;
@@ -113,6 +46,18 @@ main {
 	justify-content: space-around;
 	align-items: center;
 }
+@mixin columnStart {
+	display: flex;
+	flex-direction: column;
+	justify-content: space-around;
+	align-items: flex-start;
+}
+@mixin columnEnd {
+	display: flex;
+	flex-direction: column;
+	justify-content: space-around;
+	align-items: flex-end;
+}
 @mixin full {
 	width: 100%;
 	height: 100%;
@@ -131,4 +76,14 @@ main {
 	background-repeat: no-repeat;
 	background-position: center;
 	background-image: url($backimg);
+}
+@mixin grid($yg, $xg) {
+	display: grid;
+	grid-template-columns: $yg;
+	grid-template-rows: $xg;
+}
+@mixin transit {
+	transition-timing-function: ease;
+	transition-duration: 400ms;
+	transition-property: all;
 }

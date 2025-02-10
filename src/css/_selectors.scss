@@ -1,0 +1,37 @@
+// PREF
+@use 'vars' as *;
+@use 'fonts' as *;
+
+:global(*) {
+	margin: 0;
+	padding: 0;
+	font-family: 'regular';
+}
+:global(body) {
+	background-color: $white;
+}
+:global(h1) {
+	font-size: $fnDash;
+	font-family: 'extraBold';
+}
+:global(h2) {
+	font-size: $fnBig;
+	font-family: 'bold';
+}
+:global(h3) {
+	font-size: $fnMed;
+}
+:global(p) {
+	font-size: $fnLit;
+}
+:global(a) {
+	font-size: $fnMed;
+	text-decoration: none;
+	color: $purple;
+}
+:global(button, input) {
+	font-size: $fnBut;
+}
+:global(ul, li) {
+	list-style: none;
+}

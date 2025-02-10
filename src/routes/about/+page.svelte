@@ -1,14 +1,13 @@
 <script lang="ts">
-	import 'css/index.scss';
+	import PresentBlock from 'blocks/presentBlock.svelte';
 </script>
 
 <main>
-	<h1>hello from about</h1>
-	<a href="/">home</a>
+	<PresentBlock txt="welcome from about" link="/" where="home" />
 </main>
 
 <style lang="scss">
-	@use 'css' as *;
+	@use 'scss' as *;
 	main {
 		width: 100vw;
 		height: 100vh;

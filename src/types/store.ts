@@ -1,5 +1,3 @@
-export interface storeInt {
-	name: string;
-	state: string;
-	params: object;
+export interface StoreInt {
+	value: string;
 }

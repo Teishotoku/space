@@ -1,1 +1,2 @@
-export let store = $state<object>({ value: 'hello from store' });
+import type { StoreInt } from '../types/store';
+export let store = $state<StoreInt>({ value: 'hello from store' });

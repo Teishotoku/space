@@ -7,6 +7,7 @@
       "@/*": ["*"],
       "views/*": ["./src/views/*"],
       "routes/*": ["./src/routes/*"],
+      "reuse/*": ["./src/reuse/*"],
       "types/*": ["./src/types/*"],
       "ui/*": ["./src/ui/*"],
       "sections/*": ["./src/ui/sections/*"],
@@ -17,7 +18,8 @@
       "buttons/*": ["./src/ui/elements/buttons/*"],
       "img/*": ["./src/assets/img/*"],
       "font/*": ["./src/assets/font/*"],
-      "css/*": ["./src/assets/style/*"]
+      "css/*": ["./src/css/*"],
+      "scss/*": ["./src/css/index.scss"]
     },
     "exclude": ["./@types", "node_modules"],
     "include": ["./src/**/*"],
