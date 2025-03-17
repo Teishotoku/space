@@ -1,5 +1,5 @@
 {
-	"name": "svelte-etud",
+	"name": "partfolio",
 	"private": true,
 	"version": "0.0.1",
 	"type": "module",
@@ -12,9 +12,9 @@
 		"format": "prettier --write .",
 		"lint": "prettier --check . && eslint .",
 		"copyb": "cp ./src/reuse/block.svelte ./src/ui/blocks/",
-		"copys": "cp ./src/reuse/block.svelte ./src/ui/sections/",
-		"copyeb": "cp ./src/reuse/block.svelte ./src/ui/elements/buttons/",
-		"copyei": "cp ./src/reuse/block.svelte ./src/ui/elements/inputs/"
+		"copys": "cp ./src/reuse/section.svelte ./src/ui/sections/",
+		"copyeb": "cp ./src/reuse/section.svelte ./src/ui/elements/buttons/",
+		"copyei": "cp ./src/reuse/section.svelte ./src/ui/elements/inputs/"
 	},
 	"devDependencies": {
 		"@eslint/compat": "^1.2.5",
@@ -35,9 +35,5 @@
 		"typescript": "^5.0.0",
 		"typescript-eslint": "^8.20.0",
 		"vite": "^5.4.11"
-	},
-	"dependencies": {
-		"@tailwindcss/vite": "^4.0.13",
-		"tailwindcss": "^4.0.13"
 	}
 }
