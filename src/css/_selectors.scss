@@ -13,7 +13,7 @@
 }
 :global(h1) {
 	font-size: $fnDash;
-	font-family: 'extraBold';
+	font-family: 'italic';
 }
 :global(h2) {
 	font-size: $fnBig;
@@ -29,6 +29,10 @@
 	font-size: $fnMed;
 	text-decoration: none;
 	color: $purple;
+	transition: 0.4s all;
+	&:hover {
+		color: $white;
+	}
 }
 :global(button, input) {
 	font-size: $fnBut;

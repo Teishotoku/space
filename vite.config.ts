@@ -21,6 +21,8 @@ export default defineConfig({
 			inputs: '/src/ui/elements/inputs/',
 			buttons: '/src/ui/elements/buttons/',
 			img: '/src/assets/img/',
+			video: '/src/assets/video/',
+			icon: '/src/assets/icon/',
 			font: '/src/assets/font/',
 			style: '/src/css/',
 			scss: '/src/css/_index.scss'
