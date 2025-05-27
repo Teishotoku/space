@@ -1,0 +1,21 @@
+version: '3.8'
+
+networks:
+  mysiteNet:
+    driver: bridge
+    ipam:
+      config:
+        - subnet: 172.24.0.0/24
+services:
+  mysite:
+    stdin_open: true
+    tty: true
+    build:
+      dockerfile: Dockerfile.prod
+      # dockerfile: Dockerfile
+    volumes:
+      - /app/node_modules
+      - .:/app
+    networks:
+      mysiteNet:
+        ipv4_address: 172.24.0.8
