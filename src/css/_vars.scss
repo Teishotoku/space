@@ -16,12 +16,13 @@ $pink: #ea9a97;
 $prim: #eb6f92;
 
 //FONT-SIZE
+$fnDash: clamp(28px, 3vw + 28px, 96px);
 $fnBig: clamp(16px, 2vw, 48px);
+$fnReg: clamp(14px, 1.7vw, 32px);
 $fnMed: clamp(12px, 1.5vw, 24px);
 $fnOpt: clamp(10px, 1.2vw, 20px);
 $fnLit: clamp(8px, 1vw, 12px);
 $fnBut: clamp(16px, 1.5vw, 24px);
-$fnDash: clamp(24px, 2.5vw, 64px);
 
 //RADIUS
 $rdBig: 24px;

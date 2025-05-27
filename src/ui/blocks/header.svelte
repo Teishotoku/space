@@ -1,6 +1,7 @@
 <script lang="ts">
 	import { page } from '$app/state';
 	import Fumo from 'icon/fumo.png';
+	import LinksBlock from './linksBlock.svelte';
 	let props = $props<string>();
 </script>
 
@@ -9,12 +10,7 @@
 		<img src={Fumo} alt="" />
 		<h1>Teishotoku</h1>
 	</div>
-	<div class="right">
-		<a href="/" class={page.url.pathname === '/' ? 'active' : 'static'}>main</a>
-		<a href="/projects" class={page.url.pathname === '/projects' ? 'active' : 'static'}>projects</a>
-		<a href="/system" class={page.url.pathname === '/system' ? 'active' : 'static'}>system</a>
-		<a href="/blog " class={page.url.pathname === '/blog' ? 'active' : 'static'}>blog</a>
-	</div>
+	<LinksBlock />
 </header>
 
 <style lang="scss">
@@ -25,7 +21,7 @@
 		height: 10vh;
 		border-radius: 0 0 $rdMed $rdMed;
 		@include between;
-		z-index: 30;
+		z-index: 50;
 	}
 	.left {
 		@include start;
@@ -51,9 +47,34 @@
 		a {
 			font-size: $fnMed;
 		}
-	}
-	.active {
-		color: $red;
-		text-decoration: underline;
+		a {
+			display: block;
+			text-shadow: 1px 1px 4px $red;
+			font-size: $fnReg;
+			margin-right: 5%;
+			transition: all 0.4s;
+			&:hover {
+				transform: translateY(-10%);
+				hr {
+					width: 100%;
+					background: $red;
+				}
+			}
+			hr {
+				@include brdr;
+				transition: all ease 0.4s;
+				width: 0px;
+				height: 4px;
+				background: transparent;
+				color: transparent;
+			}
+		}
+		.active {
+			color: $purple;
+			hr {
+				width: 100%;
+				background: $purple;
+			}
+		}
 	}
 </style>

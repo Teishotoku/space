@@ -9,13 +9,13 @@
 		<img src={Profile} alt="" />
 		<div class="head">
 			<h1>Welcome to</h1>
-			<h1>Teishotoku.info</h1>
+			<h1>teisho.space</h1>
 		</div>
-		<PrimaryButton cls="dashBtn" txt="my projects" />
+		<PrimaryButton cls="dashBtn" txt="my projects" href="/projects" />
 	</div>
 	<div class="video">
 		<div class="layer"></div>
-		<video src={Video} loop autoplay> </video>
+		<video src={Video} loop autoplay muted />
 	</div>
 </section>
 
@@ -51,12 +51,12 @@
 		height: 100%;
 		video {
 			height: 100%;
-			width: 110%;
+			width: 120%;
 		}
 	}
 	.layer {
 		width: 50%;
-		height: 100%;
+		height: 90%;
 		position: absolute;
 		background: linear-gradient(to right, $black 10%, transparent);
 	}

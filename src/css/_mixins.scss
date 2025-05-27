@@ -74,7 +74,7 @@
 @mixin imgback($backimg) {
 	background-size: 100%;
 	background-repeat: no-repeat;
-	background-position: center;
+	background-position: cover;
 	background-image: url($backimg);
 }
 @mixin grid($yg, $xg) {
@@ -86,4 +86,7 @@
 	transition-timing-function: ease;
 	transition-duration: 400ms;
 	transition-property: all;
+}
+@mixin brdr {
+	border-radius: $rdBig $rdLit $rdMed $rdLit;
 }
