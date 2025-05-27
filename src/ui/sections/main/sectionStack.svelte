@@ -1,6 +1,6 @@
 <script lang="ts">
 	import NamingBlock from 'blocks/namingBlock.svelte';
-	import Tailwind from 'img/logo/sass.svg';
+	import Tailwind from 'img/logo/tailwind.svg';
 	import Nest from 'img/logo/nest.svg';
 	import Fastapi from 'img/logo/fastapi.svg';
 	import Docker from 'img/logo/docker.svg';
@@ -57,8 +57,6 @@
 			color: $red;
 			background: $red;
 			border-radius: $rdLit 0 0 $rdBig;
-			&:hover {
-			}
 		}
 	}
 	.line {

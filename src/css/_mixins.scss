@@ -85,8 +85,8 @@
 }
 @mixin grid($yg, $xg) {
 	display: grid;
-	grid-template-columns: $yg;
-	grid-template-rows: $xg;
+	grid-template-columns: repeat($yg, 1fr);
+	grid-template-rows: repeat($xg, 1fr);
 }
 @mixin transit {
 	transition-timing-function: ease;
