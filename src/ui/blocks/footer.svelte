@@ -4,7 +4,6 @@
 	import Github from 'icon/git/github.svg';
 	import Forgejo from 'icon/git/forgejo.svg';
 	import Codeberg from 'icon/git/codeberg.svg';
-	let props = $props<string>();
 </script>
 
 <footer>
@@ -24,6 +23,8 @@
 		height: 20vh;
 		@include between;
 		z-index: 20;
+		border-top: 2px solid $red;
+		border-radius: $rdBig $rdBig 0 0;
 	}
 	.right {
 		margin-right: 5%;

@@ -1,8 +1,6 @@
 <script lang="ts">
-	import { page } from '$app/state';
 	import Fumo from 'icon/fumo.png';
 	import LinksBlock from './linksBlock.svelte';
-	let props = $props<string>();
 </script>
 
 <header>

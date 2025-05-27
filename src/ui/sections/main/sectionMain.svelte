@@ -34,6 +34,7 @@
 		img {
 			height: 25%;
 			border-radius: 100%;
+			box-shadow: 8px 8px 16px $prim;
 		}
 	}
 	.head {
