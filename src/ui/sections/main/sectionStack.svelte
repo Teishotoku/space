@@ -1,4 +1,7 @@
 <script lang="ts">
+	import { HighlightSvelte } from 'svelte-highlight';
+	import { json } from 'svelte-highlight/languages';
+	import Highlight from 'svelte-highlight';
 	import NamingBlock from 'blocks/namingBlock.svelte';
 	import Tailwind from 'img/logo/tailwind.svg';
 	import Nest from 'img/logo/nest.svg';
@@ -6,13 +9,39 @@
 	import Docker from 'img/logo/docker.svg';
 	import Laravel from 'img/logo/laravel.svg';
 	import Node from 'img/logo/nodejs.svg';
+	import horizonDark from 'svelte-highlight/styles/horizon-dark';
+	import type { json } from 'svelte-highlight/languages';
+	const code = `
+{
+  “langs”: {
+    “backend”: {
+      [“express”, “laravel”, “nest”, “fastapi”, “gin”],
+      [“nodejs”, “php”, “go”, “python”],
+    },
+    “frontend”: {
+      [“react”, “vue”, “svelte”, “solid”, “next”, “nuxt”],
+      [“html”, “css/sass”, “js/ts”, “tailwind/bootstrap”],
+    },
+  },
+  “databases”: {
+    [“sqlite”, “postgres”, “sqlite”, “mongodb”, “redis”],
+  },
+  “devops”: {
+    [“docker”, “ansible”, “terraform”, “nixos”],
+  },
+}
+`;
 </script>
+
+<svelte:head>
+	{@html horizonDark}
+</svelte:head>
 
 <section>
 	<div class="content">
 		<NamingBlock txt="stack" />
 		<div class="left">
-			<code lang="javascript">let a = 5</code>
+			<Highlight language={json} {code} />
 		</div>
 	</div>
 	<div class="right">
@@ -46,6 +75,15 @@
 		margin-left: 2%;
 		background: $dim;
 		border: 4px solid $red;
+		h2 {
+			color: $white;
+		}
+		h3 {
+			color: $orange;
+		}
+		h4 {
+			color: $green;
+		}
 	}
 	.right {
 		@include column;
