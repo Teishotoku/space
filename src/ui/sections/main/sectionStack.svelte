@@ -1,6 +1,4 @@
 <script lang="ts">
-	import { HighlightSvelte } from 'svelte-highlight';
-	import { json } from 'svelte-highlight/languages';
 	import Highlight from 'svelte-highlight';
 	import NamingBlock from 'blocks/namingBlock.svelte';
 	import Tailwind from 'img/logo/tailwind.svg';
@@ -9,26 +7,26 @@
 	import Docker from 'img/logo/docker.svg';
 	import Laravel from 'img/logo/laravel.svg';
 	import Node from 'img/logo/nodejs.svg';
-	import horizonDark from 'svelte-highlight/styles/horizon-dark';
-	import type { json } from 'svelte-highlight/languages';
+	import json from 'svelte-highlight/languages/json';
+	import horizonDark from 'svelte-highlight/styles/ros-pine';
 	const code = `
 {
-  “langs”: {
-    “backend”: {
-      [“express”, “laravel”, “nest”, “fastapi”, “gin”],
-      [“nodejs”, “php”, “go”, “python”],
+  "langs": {
+    "backend": {
+      ["express", "laravel", "nest", "fastapi", "gin"]
+      ["nodejs", "php", "go", "python"]
     },
-    “frontend”: {
-      [“react”, “vue”, “svelte”, “solid”, “next”, “nuxt”],
-      [“html”, “css/sass”, “js/ts”, “tailwind/bootstrap”],
-    },
+    "frontend": {
+      ["react", "vue", "svelte", "solid", "next", "nuxt"]
+      ["html", "css/sass", "js/ts", "tailwind/bootstrap"]
+    }
   },
-  “databases”: {
-    [“sqlite”, “postgres”, “sqlite”, “mongodb”, “redis”],
+  "databases": {
+    ["sqlite", "postgres", "mysql", "mongodb", "redis"]
   },
-  “devops”: {
-    [“docker”, “ansible”, “terraform”, “nixos”],
-  },
+  "devops": {
+    ["docker", "ansible", "terraform", "nixos"]
+  }
 }
 `;
 </script>
@@ -41,7 +39,7 @@
 	<div class="content">
 		<NamingBlock txt="stack" />
 		<div class="left">
-			<Highlight language={json} {code} />
+			<Highlight class="highlight" language={json} {code} />
 		</div>
 	</div>
 	<div class="right">
@@ -70,11 +68,14 @@
 		height: 100%;
 	}
 	.left {
+		@include start;
+		overflow: hidden;
 		width: 90%;
-		height: 80%;
+		height: 70%;
 		margin-left: 2%;
-		background: $dim;
+		background: $black;
 		border: 4px solid $red;
+		font-size: $fnReg;
 		h2 {
 			color: $white;
 		}
@@ -84,6 +85,10 @@
 		h4 {
 			color: $green;
 		}
+	}
+	.highlight {
+		height: 100%;
+		width: 100%;
 	}
 	.right {
 		@include column;
