@@ -9,6 +9,10 @@
 
 <style lang="scss">
 	@use 'scss' as *;
+	div {
+		height: 20%;
+		@include column;
+	}
 	h1 {
 		font-size: $fnDash;
 		background: linear-gradient(to right, $red, $orange);
@@ -18,6 +22,7 @@
 	hr {
 		@include brdr;
 		height: 4px;
+		width: 100%;
 		background: linear-gradient(to right, $red, $orange);
 		color: transparent;
 	}

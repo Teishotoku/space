@@ -95,24 +95,25 @@
 	}
 	.theme {
 		@include columnStart;
-		height: 60%;
+		height: 80%;
 		width: 100%;
 	}
 	.colors {
-		height: 60%;
+		height: 70%;
 		width: 100%;
 		display: grid;
 		grid-template-rows: repeat(2, 1fr);
 		grid-template-columns: repeat(4, 1fr);
 		div {
 			@include brdr;
-			height: 40%;
+			height: 45%;
 			aspect-ratio: 1 / 1;
 			background-color: $dim;
 			transition: all 0.4s;
 			box-shadow: 4px 4px 8px #000000;
 			&:hover {
 				box-shadow: 4px 4px 8px $white;
+				aspect-ratio: 1.7 / 1;
 			}
 			&:nth-child(1) {
 				background-color: $red;
@@ -143,6 +144,40 @@
 	@media only screen and (max-width: 1024px) {
 		.content {
 			@include columnEvenly;
+		}
+		.left {
+			@include evenly;
+			flex-direction: row;
+			height: 40%;
+			width: 100%;
+			hr {
+				width: 4px;
+				height: 80%;
+			}
+		}
+		.line {
+			height: 80%;
+			@include columnEvenly;
+		}
+		.right {
+			@include columnEvenly;
+			height: 50%;
+			width: 100%;
+		}
+		.font {
+			@include evenly;
+			height: 30%;
+			width: 80%;
+			h2 {
+				font-size: $fnBig;
+			}
+		}
+		.theme {
+			@include columnEvenly;
+			width: 100%;
+		}
+		.colors {
+			width: 70%;
 		}
 	}
 </style>

@@ -1,5 +1,9 @@
+<script lang="ts">
+	import SectionBlog from 'sections/blog/sectionBlog.svelte';
+</script>
+
 <svelte:head>
-	<title>blog</title>
+	<title>my system</title>
 </svelte:head>
 
-<h1>blog page</h1>
+<SectionBlog />

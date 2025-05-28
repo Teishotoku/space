@@ -28,9 +28,6 @@
 		margin: 0% 5%;
 		width: 25%;
 		a {
-			font-size: $fnMed;
-		}
-		a {
 			display: block;
 			text-shadow: 1px 1px 4px $red;
 			font-size: $fnReg;
@@ -53,6 +50,16 @@
 			hr {
 				width: 100%;
 				background: $purple;
+			}
+		}
+	}
+	@media only screen and (max-width: 1024px) {
+		.links {
+			width: 60%;
+			height: 50%;
+			a {
+				font-size: $fnBig;
+				margin-right: 10%;
 			}
 		}
 	}

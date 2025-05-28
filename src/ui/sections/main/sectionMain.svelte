@@ -31,6 +31,7 @@
 		width: 30%;
 		height: 100%;
 		padding-left: 5%;
+		z-index: 20;
 		img {
 			height: 25%;
 			border-radius: 100%;
@@ -53,6 +54,7 @@
 		video {
 			height: 100%;
 			width: 120%;
+			object-fit: cover;
 		}
 	}
 	.layer {
@@ -65,5 +67,17 @@
 		width: 70%;
 		height: 10%;
 		font-size: $fnBig;
+	}
+	@media only screen and (max-width: 1024px) {
+		.text {
+			@include columnEvenly;
+			width: 100%;
+		}
+		.head {
+			text-align: center;
+		}
+		.video {
+			display: none;
+		}
 	}
 </style>

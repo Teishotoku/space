@@ -47,4 +47,18 @@
 	.svg {
 		filter: invert(1);
 	}
+	@media only screen and (max-width: 1024px) {
+		footer {
+			@include columnEvenly;
+		}
+		.right {
+			width: 60%;
+			height: 50%;
+			a {
+				img {
+					height: 50%;
+				}
+			}
+		}
+	}
 </style>

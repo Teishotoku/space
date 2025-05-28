@@ -41,7 +41,7 @@
 	.right {
 		@include between;
 		margin-right: 5%;
-		width: 25%;
+		width: 35%;
 		a {
 			font-size: $fnMed;
 		}
@@ -73,6 +73,17 @@
 				width: 100%;
 				background: $purple;
 			}
+		}
+	}
+	@media only screen and (max-width: 1024px) {
+		.left {
+			h1 {
+				display: none;
+			}
+		}
+		.right {
+			width: 70%;
+			height: 80%;
 		}
 	}
 </style>

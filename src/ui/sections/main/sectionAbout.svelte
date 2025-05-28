@@ -42,13 +42,14 @@
 	.content {
 		@include between;
 		width: 100%;
-		height: 100%;
+		height: 80%;
 	}
 	span {
 		color: $red;
 	}
 	.bright {
 		color: $black;
+		text-align: center;
 		@include columnEvenly;
 		width: 30%;
 		height: 100%;
@@ -73,6 +74,28 @@
 		height: 80%;
 		p {
 			font-size: $fnReg;
+		}
+	}
+	@media only screen and (max-width: 1024px) {
+		.content {
+			@include columnBetween;
+		}
+		article {
+			width: 90%;
+			height: 40%;
+			margin-left: 0;
+			p {
+				font-size: $fnBig;
+			}
+		}
+		.bright {
+			flex-direction: row;
+			@include around;
+			width: 100%;
+			height: 40%;
+			img {
+				height: 50%;
+			}
 		}
 	}
 </style>

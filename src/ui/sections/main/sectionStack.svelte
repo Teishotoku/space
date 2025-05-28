@@ -69,7 +69,7 @@
 	}
 	.left {
 		@include start;
-		overflow: hidden;
+		overflow: scroll;
 		width: 90%;
 		height: 70%;
 		margin-left: 2%;
@@ -95,7 +95,7 @@
 		width: 30%;
 		height: 100%;
 		hr {
-			width: 100%;
+			width: 99.5%;
 			height: 16px;
 			color: $red;
 			background: $red;
@@ -119,6 +119,46 @@
 			&:hover {
 				width: 80%;
 				filter: drop-shadow(8px 8px 8px $orange);
+			}
+		}
+	}
+	@media only screen and (max-width: 1024px) {
+		section {
+			@include columnEvenly;
+		}
+		.content {
+			@include columnEvenly;
+			height: 60%;
+			width: 100%;
+		}
+		.left {
+			font-size: $fnBig;
+			margin-left: 0;
+			height: 80%;
+			width: 100%;
+			border-left: 0px;
+			border-right: 0px;
+		}
+		.right {
+			@include column;
+			width: 100%;
+			height: 35%;
+			hr {
+				display: none;
+			}
+		}
+		.line {
+			@include evenly;
+			flex-direction: row;
+			width: 100%;
+			height: 100%;
+			border-top: 4px solid $red;
+			border-bottom: 4px solid $red;
+			border-right: 0px;
+			border-left: 0px;
+			img {
+				height: 30%;
+				aspect-ratio: 1 / 1;
 			}
 		}
 	}
