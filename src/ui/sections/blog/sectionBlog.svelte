@@ -4,6 +4,7 @@
 
 <section>
 	<NamingBlock txt="Blog" />
+	<h1>Coming soon.</h1>
 </section>
 
 <style lang="scss">
@@ -11,5 +12,8 @@
 	section {
 		@include section;
 		@include columnEvenly;
+		h1 {
+			color: $prim;
+		}
 	}
 </style>
