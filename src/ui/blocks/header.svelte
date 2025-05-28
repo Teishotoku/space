@@ -86,4 +86,16 @@
 			height: 80%;
 		}
 	}
+	@media only screen and (max-width: 600px) {
+		header {
+			@include center;
+		}
+		.left {
+			display: none;
+		}
+		.right {
+			width: 100%;
+			height: 80%;
+		}
+	}
 </style>

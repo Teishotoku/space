@@ -82,14 +82,14 @@
 	:global(.btnPet1) {
 		padding: 5% 10%;
 	}
-	@media only screen and (max-width: 1524px) {
+	@media only screen and (max-width: 1375px) {
 		.dark {
 			@include columnEvenly;
 		}
 		.left {
 			@include columnEvenly;
 			height: 40%;
-			width: 100%;
+			width: 50%;
 			padding-left: 0;
 		}
 		.right {
@@ -109,6 +109,9 @@
 		}
 	}
 	@media only screen and (max-width: 1000px) {
+		.left {
+			width: 100%;
+		}
 		.logos {
 			img {
 				height: 70%;

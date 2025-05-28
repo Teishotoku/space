@@ -63,4 +63,9 @@
 			}
 		}
 	}
+	@media only screen and (max-width: 1024px) {
+		.links {
+			width: 90%;
+		}
+	}
 </style>

@@ -98,4 +98,15 @@
 			}
 		}
 	}
+	@media only screen and (max-width: 1024px) {
+		section {
+			height: 50vh;
+		}
+		article {
+			height: 100%;
+		}
+		.bright {
+			display: none;
+		}
+	}
 </style>
