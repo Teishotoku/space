@@ -98,9 +98,9 @@
 			}
 		}
 	}
-	@media only screen and (max-width: 1024px) {
+	@media only screen and (max-width: 600px) {
 		section {
-			height: 50vh;
+			height: 100vh;
 		}
 		article {
 			height: 100%;
