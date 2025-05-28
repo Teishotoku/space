@@ -82,4 +82,41 @@
 	:global(.btnPet1) {
 		padding: 5% 10%;
 	}
+	@media only screen and (max-width: 1524px) {
+		.dark {
+			@include columnEvenly;
+		}
+		.left {
+			@include columnEvenly;
+			height: 40%;
+			width: 100%;
+			padding-left: 0;
+		}
+		.right {
+			height: 40%;
+			width: 90%;
+		}
+		.stack {
+			@include columnEvenly;
+			height: 80%;
+			h2 {
+				font-size: $fnDash;
+			}
+		}
+		.logos {
+			width: 100%;
+			height: 70%;
+		}
+	}
+	@media only screen and (max-width: 1000px) {
+		.logos {
+			img {
+				height: 70%;
+			}
+			display: grid;
+			grid-template-rows: repeat(2, 1fr);
+			grid-template-columns: repeat(3, 20%);
+			grid-row: 2 2 / 6;
+		}
+	}
 </style>
