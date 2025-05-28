@@ -1,6 +1,7 @@
 <script lang="ts">
 	import SectionPet from 'sections/projects/sectionPet.svelte';
 	import SectionPet2 from 'sections/projects/sectionPet2.svelte';
+	import SectionPet3 from 'sections/projects/sectionPet3.svelte';
 </script>
 
 <svelte:head>
@@ -9,3 +10,4 @@
 
 <SectionPet />
 <SectionPet2 />
+<SectionPet3 />
