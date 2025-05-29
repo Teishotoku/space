@@ -1,28 +1,24 @@
 <script lang="ts">
 	import PrimaryButton from 'buttons/primaryButton.svelte';
-	import Laravel from 'img/logo/laravel.svg';
-	import Mysql from 'img/logo/mysql.png';
-	import Svelte from 'img/logo/svelte.svg';
-	import Sass from 'img/logo/sass.svg';
-	import Typescipt from 'img/logo/typescript.svg';
+	let props = $props<string>();
 </script>
 
 <section>
-	<div class="pet">
+	<div class="pet" style="background-image: url('{props.img}');">
 		<div class="dark">
 			<div class="left">
-				<h1>Kugoo</h1>
-				<PrimaryButton txt="on site" cls="btnPet1" href="https://pet3.teisho.space" />
+				<h1>{props.head}</h1>
+				<PrimaryButton txt="on site" cls="btnPet1" href={`https://${props.domain}`} />
 			</div>
 			<div class="right">
 				<div class="stack">
 					<h2>stack</h2>
 					<div class="logos">
-						<img src={Laravel} alt="" />
-						<img src={Mysql} alt="" />
-						<img src={Svelte} alt="" />
-						<img src={Sass} alt="" />
-						<img src={Typescipt} alt="" />
+						<img src={props.back} alt="" />
+						<img src={props.base} alt="" />
+						<img src={props.front} alt="" />
+						<img src={props.style} alt="" />
+						<img src={props.other} alt="" />
 					</div>
 				</div>
 			</div>
@@ -34,11 +30,13 @@
 	@use 'scss' as *;
 	section {
 		@include columnEvenly;
-		width: 100vw;
+		width: 100%;
 		height: 120vh;
 	}
 	.pet {
-		@include imgback('img/3pet.png');
+		background-position: center;
+		background-repeat: no-repeat;
+		background-size: cover;
 		background-size: cover;
 		width: 90%;
 		height: 80%;
@@ -49,6 +47,7 @@
 		@include full;
 		@include evenly;
 		background: linear-gradient(to bottom, #00000000 10%, $black 100%);
+		overflow: hidden;
 	}
 	.left {
 		@include columnStart;
@@ -113,13 +112,15 @@
 			width: 100%;
 		}
 		.logos {
+			height: 100%;
+			width: 100%;
+			display: grid;
+			grid-template-rows: repeat(2, 40%);
+			grid-template-columns: repeat(3, 0fr);
+			gap: 5%;
 			img {
 				height: 70%;
 			}
-			display: grid;
-			grid-template-rows: repeat(2, 1fr);
-			grid-template-columns: repeat(3, 20%);
-			grid-row: 2 2 / 6;
 		}
 	}
 </style>

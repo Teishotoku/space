@@ -19,7 +19,7 @@
 <style lang="scss">
 	@use 'scss' as *;
 	footer {
-		width: 100vw;
+		width: 100%;
 		height: 20vh;
 		@include between;
 		z-index: 20;

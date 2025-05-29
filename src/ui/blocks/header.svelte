@@ -15,7 +15,7 @@
 	@use 'scss' as *;
 	header {
 		background-color: $blackLight;
-		width: 100vw;
+		width: 100%;
 		height: 10vh;
 		border-radius: 0 0 $rdMed $rdMed;
 		@include between;
