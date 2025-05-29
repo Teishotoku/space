@@ -19,7 +19,7 @@
 	@use 'scss' as *;
 	section {
 		@include center;
-		width: 100vw;
+		width: 100%;
 		height: 90vh;
 	}
 	.errorBlock {
