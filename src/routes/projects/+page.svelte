@@ -28,7 +28,7 @@
 <SectionPets
 	head="Best Shop"
 	domain="pet1.teisho.space"
-	img="/src/assets/img/1pet.png"
+	img="1pet.png"
 	back={Fastapi}
 	base={Mongo}
 	front={Solidjs}
@@ -38,7 +38,7 @@
 <SectionPets
 	head="FindTrend"
 	domain="pet2.teisho.space"
-	img="/src/assets/img/2pet.png"
+	img="2pet.png"
 	back={Express}
 	base={Postgres}
 	front={React}
@@ -48,7 +48,7 @@
 <SectionPets
 	head="Kugoo"
 	domain="pet3.teisho.space"
-	img="/src/assets/img/3pet.png"
+	img="3pet.png"
 	back={Laravel}
 	base={Mysql}
 	front={Svelte}
