@@ -16,6 +16,9 @@
 	font-size: $fnDash;
 	font-family: 'italic';
 }
+:global(hr) {
+	border-color: transparent;
+}
 :global(h2) {
 	font-size: $fnBig;
 	font-family: 'bold';

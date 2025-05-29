@@ -53,6 +53,8 @@
 		@include section;
 		@include columnEvenly;
 		background: linear-gradient(to bottom, $black, $dim);
+		z-index: 10;
+		overflow: hidden;
 	}
 	.content {
 		@include evenly;
@@ -64,6 +66,7 @@
 		width: 40%;
 		height: 60%;
 		hr {
+			border-color: transparent;
 			width: 90%;
 			height: 8px;
 			color: $red;
@@ -99,7 +102,7 @@
 		width: 100%;
 	}
 	.colors {
-		height: 70%;
+		height: 80%;
 		width: 100%;
 		display: grid;
 		grid-template-rows: repeat(2, 1fr);

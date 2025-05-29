@@ -68,8 +68,13 @@
 		height: 100%;
 	}
 	.left {
+		&::-webkit-scrollbar {
+			display: none;
+		}
 		@include start;
-		overflow: scroll;
+		overflow: auto;
+		scrollbar-width: 20px;
+		scrollbar-base-color: #000;
 		width: 90%;
 		height: 70%;
 		margin-left: 2%;
