@@ -1,39 +1,10 @@
-# sv
+# info site about me
 
-## Creating a project
+## made with:
 
-Clone this repo
+- sveltekit
+- ts
+- sass
+- [svelte-highlight](https://github.com/highlightjs/highlight.js).
 
-```bash
-# create a new project in the current directory
-git clone git@github:Teishotoku/sveltePattern.git
-```
-
-## Rules
-
-sections make with other style file
-blocks elements make style into svelte files
-interface & types named pascalCase
-
-## Developing
-
-Once you've created a project and installed dependencies with `npm install` (or `pnpm install` or `yarn`), start a development server:
-
-```bash
-npm run dev
-
-# or start the server and open the app in a new browser tab
-npm run dev -- --open
-```
-
-## Building
-
-To create a production version of your app:
-
-```bash
-npm run build
-```
-
-You can preview the production build with `npm run preview`.
-
-> To deploy your app, you may need to install an [adapter](https://svelte.dev/docs/kit/adapters) for your target environment.
+  ![Header](https://github.com/Teishotoku/space/blob/main/.github/dashboard.png)
