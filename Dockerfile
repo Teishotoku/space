@@ -8,5 +8,9 @@ RUN npm install
 
 COPY . .
 
-CMD ["npm", "run", "dev"]
+RUN npm run build
+
+EXPOSE 4000
+
+CMD ["npm", "run", "preview"]
 
